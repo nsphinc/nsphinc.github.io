@@ -1,0 +1,24 @@
+# Dependencies
+markdown:         Kramdown
+highlighter:      pygments
+plugins: [jekyll-paginate]
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Abstract musings
+tagline:          ''
+description:      "recording a foray into quantitative Thought"
+baseurl:          "https://github.com/nsphinc/"
+
+author:
+  name:           'Gabriel Chu'
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/nsphinc # replace with my github
