@@ -10,7 +10,7 @@ permalink:        pretty
 title:            Abstract musings
 tagline:          ''
 description:      "recording a foray into quantitative Thought"
-url:              "nsphinc.github.io"
+url:              "nsphinc.github.io/"
 baseurl:          
 author:
   name:           'Gabriel Chu'
