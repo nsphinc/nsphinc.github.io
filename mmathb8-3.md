@@ -1,6 +1,6 @@
 ---
 layout: page
-title: MMath B8.3 Notes
+title: B8-3
 ---
 
 **Lectures** [1](#lecture-1-option-pricing-binomial-model) | [2](#lecture-2-itos-lemma-and-applications) | [3]() | [4]() | [5]() | [6]() | [7]() | [8]() | [9]() | [10]() | [11]() | [12]() | [13]() | [14]() | [15]() | [16]()  
