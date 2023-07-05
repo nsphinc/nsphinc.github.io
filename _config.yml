@@ -7,11 +7,12 @@ plugins: [jekyll-paginate]
 permalink:        pretty
 
 # Setup
-title:            Abstract musings
+title:            "Help me..."
 tagline:          ''
-description:      "recording a foray into quantitative Thought"
+description:      "decide what to write here!"
 url:              "https://nsphinc.github.io/"
 baseurl:          "https://nsphinc.github.io/"
+# baseurl:          /
 author:
   name:           'Gabriel Chu'
 

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      B8-3 &middot; Abstract musings
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://nsphinc.github.io/public/css/poole.css">
+  <link rel="stylesheet" href="https://nsphinc.github.io/public/css/syntax.css">
+  <link rel="stylesheet" href="https://nsphinc.github.io/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://nsphinc.github.io/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="https://nsphinc.github.io/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="theme-base-08 layout-reverse">
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="https://nsphinc.github.io/">
+          Abstract musings
+        </a>
+      </h1>
+      <p class="lead">recording a foray into quantitative Thought</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">About</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item active" href="/mmathb8-3/">B8-3</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/projects/">Projects</a>
+          
+        
+      
+
+    <p></p>
+    </nav>
+
+    <p>&copy; Gabriel Chu 2023. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">B8-3</h1>
+  <table>
+  <tbody>
+    <tr>
+      <td><strong>Lectures</strong> <a href="#lecture-1-option-pricing-binomial-model">1</a></td>
+      <td><a href="#lecture-2-itos-lemma-and-applications">2</a></td>
+      <td><a href="">3</a></td>
+      <td><a href="">4</a></td>
+      <td><a href="">5</a></td>
+      <td><a href="">6</a></td>
+      <td><a href="">7</a></td>
+      <td><a href="">8</a></td>
+      <td><a href="">9</a></td>
+      <td><a href="">10</a></td>
+      <td><a href="">11</a></td>
+      <td><a href="">12</a></td>
+      <td><a href="">13</a></td>
+      <td><a href="">14</a></td>
+      <td><a href="">15</a></td>
+      <td><a href="">16</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="lecture-1-option-pricing-binomial-model"><em>Lecture 1,</em> Option pricing: binomial model</h1>
+
+<ul>
+  <li>Arbitrage pricing</li>
+  <li>Binomial trees</li>
+  <li>Risk-neutral valuation</li>
+</ul>
+
+<h2 id="options">Options</h2>
+
+<ul>
+  <li>European call/put option
+    <ul>
+      <li>Right to purchase/sell the underlying at pre-specified time at expiration date for strike price</li>
+    </ul>
+  </li>
+  <li>American call/put option
+    <ul>
+      <li>Right to purchase/sell the underlying at any time up until expiration date for strike price</li>
+    </ul>
+  </li>
+  <li>Terminology
+    <ul>
+      <li>Underlying (stock, say) price S</li>
+      <li>Expiration date T</li>
+      <li>Strike price K</li>
+      <li>Risk-free rate r
+        <ul>
+          <li>Gross risk free rate $R = 1+r$</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Look for <em>replicating payoff</em>, say, of $A_3$ using $A_1$ and $A_2$</li>
+</ul>
+
+<h2 id="binomial-model">Binomial model</h2>
+<ul>
+  <li>
+    <p>Two possible states, say the up and down states</p>
+  </li>
+  <li>Pricing a call in a binomial model
+    <ul>
+      <li>$C_u^E=\max{(uS-K,0)}$ payoff in up state (probability p, S worth uS)</li>
+      <li>$C_d^E=\max{(dS-K,0)}$ payoff in down state (probabilty $q=1-p$, S worth dS)</li>
+    </ul>
+  </li>
+  <li>Set up portfolio with B cash in bond and $\Delta$ amount of stock to replicate payoff
+    <ul>
+      <li>$\Pi(0)=B+\Delta S$</li>
+      <li>Choose $\Delta$ such that
+        <ul>
+          <li>$\Delta uS+ RB=C_u^E$</li>
+          <li>$\Delta dS+ RB=C_d^E$</li>
+        </ul>
+      </li>
+      <li><strong>Therefore solve for $\Delta$ and B in matrix form</strong></li>
+    </ul>
+  </li>
+  <li><strong>Given</strong> solution, this (replicating) portfolio, by <strong>no arbitrage</strong>, is the same value as that of the call $C^E(S,t=0;K,1)$ (European option so superscript E)
+    <ul>
+      <li><strong>No arbitrage</strong>: the price of the derivative is set at the same level as the value of the replicating portfolio, so that no trader can make a risk-free profit by buying one and selling the other</li>
+      <li>Value of the call (price of the call as an expectation) can thus be seen as the <em>discounted (/R) weighted average of the <strong>portfolio</strong> payoff at expiry</em></li>
+      <li>In other words, $C^E(S,t=0;K,1)=\frac{1}{R}[p^<em>C_u^E+q^</em>C_d^E]$
+        <ul>
+          <li>Basically $C^E$ is the <em>price you set</em></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>$C^E(S,t=0;K,1)$ can be also thought of as the <em>intrinsic value</em> of the call, which would be the value, or benefit, obtained by the holder by exercising the option <em>immediately</em>
+    <ul>
+      <li>Total value = intrinsic value + time premium (https://www.scranton.edu/faculty/hussain/teaching/fin471_/DSEC03.pdf)</li>
+      <li>Therefore, with zero strike price, it can be seen that:</li>
+    </ul>
+  </li>
+  <li>Note $C^E(S,t=0;K=0,1)=S=\frac{1}{R}[p^<em>C_u^E+q^</em>C_d^E]=\frac{1}{R}[p^<em>uS+(1-p^</em>)dS]=\frac{1}{R}\mathbb{E}^*[S_1]$
+    <ul>
+      <li>So, under no arbitrage, $RS=\mathbb{E}^*[S_1]$</li>
+    </ul>
+  </li>
+  <li><strong>Proposition:</strong> American call written on S (underlying that pays no dividends) is never exercised early
+    <ul>
+      <li>$C^A(S,t;K,T)\geq S-Ke^{-r(T-t)}$</li>
+      <li>Think NPV lost on <em>not</em> delaying K consumption
+        <ul>
+          <li>https://www.math.ucla.edu/~caflisch/181.1.07w/Lect18.pdf</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Proposition:</strong> Put-call-parity for European options
+    <ul>
+      <li>$C^E(S,t;K,T)-P^E(S,t;K,T)=S-Ke^{-r(T-t)}$</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="lecture-2-itos-lemma-and-applications"><em>Lecture 2,</em> Ito’s Lemma and applications</h1>
+
+<ul>
+  <li>Brownian Motion, Wiener Process</li>
+  <li>Stochastic Integrals</li>
+  <li>Itô’s Lemma</li>
+  <li>Modelling returns</li>
+</ul>
+
+<h2 id="brownian-motion-wiener-process">Brownian Motion, Wiener Process</h2>
+
+<ul>
+  <li><strong>Definition:</strong> stochastic process W is a Wiener process (or Brownian motion) iff
+  1. $W_0$=0
+  2. W has independent increments (where $r&lt;s\leq t&lt;u$, then $W_u-W_t$ and $W_s-W_r$ are independent stochastic variables)
+  3. For $s&lt;t$ the distribution of the stochastic variable $W_t-W_s$ is $N(0,t-s)$
+  4. W has <em>continuous trajectories</em>
+    <ul>
+      <li>We work with these now.</li>
+    </ul>
+  </li>
+  <li>Some properties of the Wiener process
+    <ul>
+      <li>$\mathbb{E}[\Delta W]=0$</li>
+      <li>$\mathbb{E}[(\Delta W)^2]=\Delta t$</li>
+      <li>$Var[\Delta W]= \Delta t$</li>
+      <li>$Var[(\Delta W)^2]=2(\Delta t)^2$</li>
+    </ul>
+  </li>
+  <li>Random walk \(X_{t+\Delta t}-X_t=\mu (t,X)\Delta t+\sigma (t,X)\Delta W_t\) where $\Delta W_t=W_{t+\Delta t}-W_t$
+    <ul>
+      <li>Taking $\Delta t$ to the limit, $dX_t=\mu (t,X)dt+\sigma (t,X)dW_t$</li>
+      <li>And with initial condition $X(0)=a$, \(X_t=a+\int^t_0{\mu (s,X)ds}+\int^t_0{\sigma (s,X)dW_s}\)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="stochastic-integrals">Stochastic Integrals</h2>
+
+<ul>
+  <li>To guarantee existence of stochastic integral $\int^t_0{g(s)dW_s}$, impose integrability conditions on g $\rightarrow$ and the class of $\mathcal{L}^2$ turns out to be natural
+    <ul>
+      <li>g belongs to class $\mathcal{L}^2[0,t]$  for all $t&gt;0$</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="itôs-isometry"><em>Itô’s Isometry</em></h2>
+
+<p>\(\mathbb{E}[\int^b_a{g(s)dW_s}]=0\) and \(\mathbb{E}[(\int^b_a{g(s)dW_s})^2]=\int^b_a{\mathbb{E}[g^2(s)]ds}\) such that one can say that as $\Delta t \rightarrow 0$ we must have \((dW_t)^2=dt\)</p>
+
+<ul>
+  <li>Work some mathematical magic</li>
+  <li>Where process S satisfies the stochastic DE: \(dS_t=\mu (S,t)dt+\sigma (S,t)dW_t\)
+    <ul>
+      <li>Where $\mu (S,t),\sigma (S,t)$ are adapted processes, and let $f$ be a <em>twice continuous differentiable function</em>, then: \(df(S,t)=(\frac{\partial f}{\partial t}+\mu(S,t)\frac{\partial f}{\partial S}+\frac12\sigma^2(S,t)\frac{\partial^2f}{\partial^2t})dt+\sigma(S,t)\frac{\partial f}{\partial S}dW_t\)</li>
+    </ul>
+  </li>
+  <li>Model returns using stochastic DE \(\frac{dS_t}{S_t}=\mu (S,t)dt+\sigma (S,t)dW_t\)
+    <ul>
+      <li>Using Itô’s lemma tells us that $S_t=S_0e^{(\mu-\frac12\sigma^2)t+\sigma W_t}$, assuming $\mu(S,t)=\mu S$ and $\sigma(S,t)=\sigma S$</li>
+    </ul>
+  </li>
+</ul>
+
+\[???\]
+
+<h2 id="black-scholes-pde">Black-Scholes PDE</h2>
+
+<ul>
+  <li>Problem:
+    <ul>
+      <li>Assume $\frac{dS_t}{S_t}=\mu (S,t)dt+\sigma (S,t)dW_t$</li>
+      <li>Price a European-style option, $V(S,t;K,T)$ written on S with payoff $V(S,T;K,T)=V(S,T)$</li>
+    </ul>
+  </li>
+  <li>Approach:
+    <ul>
+      <li>Form a hedge portfolio long a call and ‘delta’ amount of the underlying</li>
+      <li>See what is the change in the value of the portoflio over a small time step</li>
+      <li>Try to choose the amount of the underlying in the portfolio so that risk or randomness is reduced</li>
+    </ul>
+  </li>
+  <li>The hedge portfolio \(\Pi(S,t)=V(S,t;K,T)-\Delta S_t\) where $\Delta$ is the <em>number of shares we choose to hold</em> in the portfolio
+    <ul>
+      <li>Change in value of portfolio $d\Pi=dV-\Delta dS$</li>
+      <li>Using Itô’s lemma, \(d\Pi=(\frac{\partial V}{\partial t}+\mu S\frac{\partial V}{\partial S}+\frac12\sigma^2S^2\frac{\partial^2V}{\partial S^2}-\Delta \mu S)dt+(\frac{\partial V}{\partial S}-\Delta)S\sigma dW_t\)</li>
+      <li>Choose at every instant in time, the following amount of stock $\Delta = \frac{\partial V}{\partial S}$ so the change in portfolio is deterministic</li>
+      <li>Therefore obtain \(d\Pi=(\frac{\partial V}{\partial t}+\frac12\sigma^2S_t^2\frac{\partial^2V}{\partial S^2})dt\)</li>
+      <li>Separately note that portfolio grows like a risk-free bond, $d\Pi=r\Pi dt$</li>
+    </ul>
+  </li>
+  <li>Therefore, \(rV=\frac{\partial V}{\partial t}+rS\frac{\partial V}{\partial S}+\frac12\sigma^2S^2\frac{\partial^2V}{\partial S^2}\) and this is the Black-Scholes PDE (will need BCs to solve for a particular European-style option)</li>
+</ul>
+
+<h1 id="heat-equation">Heat Equation</h1>
+
+
+</div>
+
+    </div>
+
+  </body>
+</html>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    }
+  });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
