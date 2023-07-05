@@ -11,9 +11,9 @@ title:            "Help me"
 tagline:          ''
 description:      "... decide what to write here!"
 url:              "https://nsphinc.github.io/"
-baseurl:          "https://nsphinc.github.io/"
+# baseurl:          "https://nsphinc.github.io/"
 cvurl:            "https://nsphinc.github.io/cv_GabrielChu.pdf"
-# baseurl:          /
+baseurl:          /
 author:
   name:           'Gabriel Chu'
 

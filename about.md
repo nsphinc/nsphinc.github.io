@@ -5,13 +5,15 @@ title: About
 
 Hi, I'm Gabriel. 
 
-I'm a rising 4th year at the University of Oxford reading Information Engineering. This will be my Masters year and I will be working on my thesis *Optimisation-based Actions in Financial Markets* looking at limit-order book strategies from the perspectives of control theory and reinforcement learning. 
+I'm a rising 4th year at the University of Oxford reading Information Engineering. 
 
-I'm fascinated by the study of complex and dynamic systems from a quantitative perspective, and you can find some projects I've been working on [here](/projects.md).
+I will be in my Masters year and will be working on my thesis: *Optimisation-based Actions in Financial Markets*, that looks at limit-order book trading strategies from the perspectives of control theory and reinforcement learning. 
+
+I'm fascinated by the study of complex and dynamic systems from a quantitative perspective, and you can find some projects I've been working on [here]({{ site.baseurl }}projects/).
 
 In my spare time you can probably either find me nose-deep in a book on theology, or out on long scenic evening walks.
 
-My CV can be found [here]({{ site.cvurl }}){:target="_blank"}. [here](/cv_GabrielChu.pdf){:target="_blank"}
+My CV can be found [here]({{ site.cvurl }}){:target="_blank"}.
 
 ## I am currently
 
