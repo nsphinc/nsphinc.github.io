@@ -1,16 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Abstract musings</title>
+ <title>Help me</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-07-04T19:43:33+01:00</updated>
+ <updated>2023-07-05T15:08:59+01:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Gabriel Chu</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>MMath B8.3</title>
+   <link href="http://localhost:4000/2023/07/03/mmathb8-3/"/>
+   <updated>2023-07-03T00:00:00+01:00</updated>
+   <id>http://localhost:4000/2023/07/03/mmathb8-3</id>
+   <content type="html">&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Lectures&lt;/strong&gt; &lt;a href=&quot;#lecture-1-option-pricing-binomial-model&quot;&gt;1&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#lecture-2-itos-lemma-and-applications&quot;&gt;2&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;&quot;&gt;3&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;&quot;&gt;4&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;&quot;&gt;5&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;&quot;&gt;6&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;&quot;&gt;7&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;&quot;&gt;8&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;&quot;&gt;9&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;&quot;&gt;10&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;&quot;&gt;11&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;&quot;&gt;12&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;&quot;&gt;13&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;&quot;&gt;14&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;&quot;&gt;15&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;&quot;&gt;16&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&quot;lecture-1-option-pricing-binomial-model&quot;&gt;&lt;em&gt;Lecture 1,&lt;/em&gt; Option pricing: binomial model&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Arbitrage pricing&lt;/li&gt;
+  &lt;li&gt;Binomial trees&lt;/li&gt;
+  &lt;li&gt;Risk-neutral valuation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;options&quot;&gt;Options&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;European call/put option
+    &lt;ul&gt;
+      &lt;li&gt;Right to purchase/sell the underlying at pre-specified time at expiration date for strike price&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;American call/put option
+    &lt;ul&gt;
+      &lt;li&gt;Right to purchase/sell the underlying at any time up until expiration date for strike price&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Terminology
+    &lt;ul&gt;
+      &lt;li&gt;Underlying (stock, say) price S&lt;/li&gt;
+      &lt;li&gt;Expiration date T&lt;/li&gt;
+      &lt;li&gt;Strike price K&lt;/li&gt;
+      &lt;li&gt;Risk-free rate r
+        &lt;ul&gt;
+          &lt;li&gt;Gross risk free rate $R = 1+r$&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Look for &lt;em&gt;replicating payoff&lt;/em&gt;, say, of $A_3$ using $A_1$ and $A_2$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;binomial-model&quot;&gt;Binomial model&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Two possible states, say the up and down states&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Pricing a call in a binomial model
+    &lt;ul&gt;
+      &lt;li&gt;$C_u^E=\max{(uS-K,0)}$ payoff in up state (probability p, S worth uS)&lt;/li&gt;
+      &lt;li&gt;$C_d^E=\max{(dS-K,0)}$ payoff in down state (probabilty $q=1-p$, S worth dS)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Set up portfolio with B cash in bond and $\Delta$ amount of stock to replicate payoff
+    &lt;ul&gt;
+      &lt;li&gt;$\Pi(0)=B+\Delta S$&lt;/li&gt;
+      &lt;li&gt;Choose $\Delta$ such that
+        &lt;ul&gt;
+          &lt;li&gt;$\Delta uS+ RB=C_u^E$&lt;/li&gt;
+          &lt;li&gt;$\Delta dS+ RB=C_d^E$&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Therefore solve for $\Delta$ and B in matrix form&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Given&lt;/strong&gt; solution, this (replicating) portfolio, by &lt;strong&gt;no arbitrage&lt;/strong&gt;, is the same value as that of the call $C^E(S,t=0;K,1)$ (European option so superscript E)
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;No arbitrage&lt;/strong&gt;: the price of the derivative is set at the same level as the value of the replicating portfolio, so that no trader can make a risk-free profit by buying one and selling the other&lt;/li&gt;
+      &lt;li&gt;Value of the call (price of the call as an expectation) can thus be seen as the &lt;em&gt;discounted (/R) weighted average of the &lt;strong&gt;portfolio&lt;/strong&gt; payoff at expiry&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;In other words, $C^E(S,t=0;K,1)=\frac{1}{R}[p^&lt;em&gt;C_u^E+q^&lt;/em&gt;C_d^E]$
+        &lt;ul&gt;
+          &lt;li&gt;Basically $C^E$ is the &lt;em&gt;price you set&lt;/em&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;$C^E(S,t=0;K,1)$ can be also thought of as the &lt;em&gt;intrinsic value&lt;/em&gt; of the call, which would be the value, or benefit, obtained by the holder by exercising the option &lt;em&gt;immediately&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Total value = intrinsic value + time premium (https://www.scranton.edu/faculty/hussain/teaching/fin471_/DSEC03.pdf)&lt;/li&gt;
+      &lt;li&gt;Therefore, with zero strike price, it can be seen that:&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Note $C^E(S,t=0;K=0,1)=S=\frac{1}{R}[p^&lt;em&gt;C_u^E+q^&lt;/em&gt;C_d^E]=\frac{1}{R}[p^&lt;em&gt;uS+(1-p^&lt;/em&gt;)dS]=\frac{1}{R}\mathbb{E}^*[S_1]$
+    &lt;ul&gt;
+      &lt;li&gt;So, under no arbitrage, $RS=\mathbb{E}^*[S_1]$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Proposition:&lt;/strong&gt; American call written on S (underlying that pays no dividends) is never exercised early
+    &lt;ul&gt;
+      &lt;li&gt;$C^A(S,t;K,T)\geq S-Ke^{-r(T-t)}$&lt;/li&gt;
+      &lt;li&gt;Think NPV lost on &lt;em&gt;not&lt;/em&gt; delaying K consumption
+        &lt;ul&gt;
+          &lt;li&gt;https://www.math.ucla.edu/~caflisch/181.1.07w/Lect18.pdf&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Proposition:&lt;/strong&gt; Put-call-parity for European options
+    &lt;ul&gt;
+      &lt;li&gt;$C^E(S,t;K,T)-P^E(S,t;K,T)=S-Ke^{-r(T-t)}$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;lecture-2-itos-lemma-and-applications&quot;&gt;&lt;em&gt;Lecture 2,&lt;/em&gt; Ito’s Lemma and applications&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Brownian Motion, Wiener Process&lt;/li&gt;
+  &lt;li&gt;Stochastic Integrals&lt;/li&gt;
+  &lt;li&gt;Itô’s Lemma&lt;/li&gt;
+  &lt;li&gt;Modelling returns&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;brownian-motion-wiener-process&quot;&gt;Brownian Motion, Wiener Process&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Definition:&lt;/strong&gt; stochastic process W is a Wiener process (or Brownian motion) iff
+  1. $W_0$=0
+  2. W has independent increments (where $r&amp;lt;s\leq t&amp;lt;u$, then $W_u-W_t$ and $W_s-W_r$ are independent stochastic variables)
+  3. For $s&amp;lt;t$ the distribution of the stochastic variable $W_t-W_s$ is $N(0,t-s)$
+  4. W has &lt;em&gt;continuous trajectories&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;We work with these now.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Some properties of the Wiener process
+    &lt;ul&gt;
+      &lt;li&gt;$\mathbb{E}[\Delta W]=0$&lt;/li&gt;
+      &lt;li&gt;$\mathbb{E}[(\Delta W)^2]=\Delta t$&lt;/li&gt;
+      &lt;li&gt;$Var[\Delta W]= \Delta t$&lt;/li&gt;
+      &lt;li&gt;$Var[(\Delta W)^2]=2(\Delta t)^2$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Random walk \(X_{t+\Delta t}-X_t=\mu (t,X)\Delta t+\sigma (t,X)\Delta W_t\) where $\Delta W_t=W_{t+\Delta t}-W_t$
+    &lt;ul&gt;
+      &lt;li&gt;Taking $\Delta t$ to the limit, $dX_t=\mu (t,X)dt+\sigma (t,X)dW_t$&lt;/li&gt;
+      &lt;li&gt;And with initial condition $X(0)=a$, \(X_t=a+\int^t_0{\mu (s,X)ds}+\int^t_0{\sigma (s,X)dW_s}\)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;stochastic-integrals&quot;&gt;Stochastic Integrals&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;To guarantee existence of stochastic integral $\int^t_0{g(s)dW_s}$, impose integrability conditions on g $\rightarrow$ and the class of $\mathcal{L}^2$ turns out to be natural
+    &lt;ul&gt;
+      &lt;li&gt;g belongs to class $\mathcal{L}^2[0,t]$  for all $t&amp;gt;0$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;itôs-isometry&quot;&gt;&lt;em&gt;Itô’s Isometry&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;\(\mathbb{E}[\int^b_a{g(s)dW_s}]=0\) and \(\mathbb{E}[(\int^b_a{g(s)dW_s})^2]=\int^b_a{\mathbb{E}[g^2(s)]ds}\) such that one can say that as $\Delta t \rightarrow 0$ we must have \((dW_t)^2=dt\)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Work some mathematical magic&lt;/li&gt;
+  &lt;li&gt;Where process S satisfies the stochastic DE: \(dS_t=\mu (S,t)dt+\sigma (S,t)dW_t\)
+    &lt;ul&gt;
+      &lt;li&gt;Where $\mu (S,t),\sigma (S,t)$ are adapted processes, and let $f$ be a &lt;em&gt;twice continuous differentiable function&lt;/em&gt;, then: \(df(S,t)=(\frac{\partial f}{\partial t}+\mu(S,t)\frac{\partial f}{\partial S}+\frac12\sigma^2(S,t)\frac{\partial^2f}{\partial^2t})dt+\sigma(S,t)\frac{\partial f}{\partial S}dW_t\)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Model returns using stochastic DE \(\frac{dS_t}{S_t}=\mu (S,t)dt+\sigma (S,t)dW_t\)
+    &lt;ul&gt;
+      &lt;li&gt;Using Itô’s lemma tells us that $S_t=S_0e^{(\mu-\frac12\sigma^2)t+\sigma W_t}$, assuming $\mu(S,t)=\mu S$ and $\sigma(S,t)=\sigma S$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+\[???\]
+
+&lt;h2 id=&quot;black-scholes-pde&quot;&gt;Black-Scholes PDE&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Problem:
+    &lt;ul&gt;
+      &lt;li&gt;Assume $\frac{dS_t}{S_t}=\mu (S,t)dt+\sigma (S,t)dW_t$&lt;/li&gt;
+      &lt;li&gt;Price a European-style option, $V(S,t;K,T)$ written on S with payoff $V(S,T;K,T)=V(S,T)$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Approach:
+    &lt;ul&gt;
+      &lt;li&gt;Form a hedge portfolio long a call and ‘delta’ amount of the underlying&lt;/li&gt;
+      &lt;li&gt;See what is the change in the value of the portoflio over a small time step&lt;/li&gt;
+      &lt;li&gt;Try to choose the amount of the underlying in the portfolio so that risk or randomness is reduced&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The hedge portfolio \(\Pi(S,t)=V(S,t;K,T)-\Delta S_t\) where $\Delta$ is the &lt;em&gt;number of shares we choose to hold&lt;/em&gt; in the portfolio
+    &lt;ul&gt;
+      &lt;li&gt;Change in value of portfolio $d\Pi=dV-\Delta dS$&lt;/li&gt;
+      &lt;li&gt;Using Itô’s lemma, \(d\Pi=(\frac{\partial V}{\partial t}+\mu S\frac{\partial V}{\partial S}+\frac12\sigma^2S^2\frac{\partial^2V}{\partial S^2}-\Delta \mu S)dt+(\frac{\partial V}{\partial S}-\Delta)S\sigma dW_t\)&lt;/li&gt;
+      &lt;li&gt;Choose at every instant in time, the following amount of stock $\Delta = \frac{\partial V}{\partial S}$ so the change in portfolio is deterministic&lt;/li&gt;
+      &lt;li&gt;Therefore obtain \(d\Pi=(\frac{\partial V}{\partial t}+\frac12\sigma^2S_t^2\frac{\partial^2V}{\partial S^2})dt\)&lt;/li&gt;
+      &lt;li&gt;Separately note that portfolio grows like a risk-free bond, $d\Pi=r\Pi dt$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Therefore, \(rV=\frac{\partial V}{\partial t}+rS\frac{\partial V}{\partial S}+\frac12\sigma^2S^2\frac{\partial^2V}{\partial S^2}\) and this is the Black-Scholes PDE (will need BCs to solve for a particular European-style option)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;heat-equation&quot;&gt;Heat Equation&lt;/h1&gt;
+
+</content>
+ </entry>
  
 
 </feed>
