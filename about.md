@@ -9,7 +9,7 @@ I am a rising 4th year at the University of Oxford. This will be my Masters year
 
 Something about me... I am fascinated by...
 
-My CV can be found [here](https://github.com/nsphinc).
+My CV can be found [here]({{ site.cvurl }}).
 
 ## This site
 

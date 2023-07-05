@@ -7,11 +7,12 @@ plugins: [jekyll-paginate]
 permalink:        pretty
 
 # Setup
-title:            "Help me..."
+title:            "Help me"
 tagline:          ''
-description:      "decide what to write here!"
+description:      "... decide what to write here!"
 url:              "https://nsphinc.github.io/"
 baseurl:          "https://nsphinc.github.io/"
+cvurl:            "https://nsphinc.github.io/cv_GabrielChu.pdf"
 # baseurl:          /
 author:
   name:           'Gabriel Chu'
