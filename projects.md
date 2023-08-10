@@ -3,46 +3,35 @@ layout: page
 title: Projects
 ---
 
-This page describes some of the projects that I have worked on. They generally revolve around my developing interests in all things computational in real-world systems, and that primarily invovles modelling and machine learning in Quantitative Finance and Neurotech.
+Here's a description of some of the projects that I have worked on in the past year. 
 
-* [A](#a)
-* [a](#a-1)
-* [B](#b)
-* [Setup](#setup)
+These generally revolve around my developing interests in all things computational in real-world systems, and that primarily invovles modelling and machine learning in Quantitative Finance and Neurotech:
+
+* [Portfolio Optimisation with Particles](#portfolio-optimisation-with-particles)
+* [Dynamic Option Hedging](#dynamic-option-hedging)
+* [Lead-Lag Portfolio Optimisation](#lead-lag-portfolio-optimisation)
+* [Neural Networks and Biosignals](#neural-networks-and-biosignals)
+* [Dimensionality Reduction Techniques](#dimensionality-reduction-techniques)
 
 ---
-## A
+## Portfolio Optimisation with Particles
 
 Something something
 
 ---
-## a
+## Dynamic Option Hedging
+
+
+
+---
+## Lead-Lag Portfolio Optimisation
 
 test test
 
 ---
-## B
+## Neural Networks and Biosignals
 
-Something
+Some fun facts about the setup of this project include:
 
 ---
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+## Dimensionality Reduction Techniques
