@@ -7,13 +7,12 @@ plugins: [jekyll-paginate]
 permalink:        pretty
 
 # Setup
-title:            "Help me"
+title:            "Quake's Constant"
 tagline:          ''
-description:      "... decide what to write here!"
+description:      "Gabriel Chu| Rising 4th Year | MEng Engineering Science | Oxford"
 url:              "https://nsphinc.github.io/"
 baseurl:          "https://nsphinc.github.io/"
 cvurl:            "https://nsphinc.github.io/cv_GabrielChu.pdf"
-# baseurl:          /
 author:
   name:           'Gabriel Chu'
 
