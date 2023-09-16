@@ -20,7 +20,7 @@ html {
 }
 @media (min-width: 48em) {
   html {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 @media (min-width: 58em) {
@@ -36,6 +36,7 @@ html {
  * Flexible banner for housing site name, intro, and "footer" content. Starts
  * out above content in mobile and later moves to the side with wider viewports.
  */
+
 
 .sidebar {
   text-align: center;
@@ -82,6 +83,7 @@ a.sidebar-nav-item:focus {
 .sidebar-nav-item.active {
   font-weight: bold;
 }
+
 
 /* Sticky sidebar
  *
@@ -157,5 +159,5 @@ a.sidebar-nav-item:focus {
 }
 .theme-base-08 .content a,
 .theme-base-08 .related-posts li a:hover {
-  color: #002147;
+  color: #0063B2;
 }
