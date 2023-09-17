@@ -11,9 +11,9 @@ title:            "Q-Space"
 tagline:          ''
 description:      Gabriel Chu <br> 4th Year | MEng Oxford
 url:              "https://nsphinc.github.io/"
-# baseurl:          "https://nsphinc.github.io/"
+baseurl:          "https://nsphinc.github.io/"
 cvurl:            "https://nsphinc.github.io/cv_GabrielChu.pdf"
-baseurl:          /
+#baseurl:          /
 author:
   name:           'Gabriel Chu'
 
@@ -24,4 +24,4 @@ paginate_path: "blog/page:num/"
 version:          2.7.0
 
 github:
-  repo:           https://github.com/nsphinc 
+  repo:           https://github.com/nsphinc
