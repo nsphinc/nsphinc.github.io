@@ -9,7 +9,7 @@ These revolve around my developing interests in modelling and machine learning i
 
 * [Deep Option Hedging with Reinforcement Learning](#deep-option-hedging-with-reinforcement-learning)
 * [Portfolio Optimisation with Particles](#portfolio-optimisation-with-particles)
-* [Portfolio Optimisation with Lead-Lag Opportunities](#portfolio-optimisation-with-lead-lag-opportunities)
+* [Arbitrage Opportunities with Lead-Lag Relations](#arbitrage-opportunities-with-lead-lag-relations)
 * [Activity Detection with Neural Networks and Muscular Biosignals](#activity-detection-with-neural-networks-and-muscular-biosignals)
 * [Dimensionality Reduction Techniques](#dimensionality-reduction-techniques)
 * [Detection of Emotions with Discriminant Analysis and EEG](#detection-of-emotions-with-discriminant-analysis-and-eeg)
@@ -30,7 +30,7 @@ Specifically,
 *Numerical methods*
 
 ---
-## Portfolio Optimisation with Lead-Lag Opportunities
+## Arbitrage Opportunities with Lead-Lag Relations
 
 This was a project I did with the Oxford Alpha Fund. 
 
