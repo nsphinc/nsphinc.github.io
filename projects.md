@@ -9,9 +9,10 @@ These revolve around my developing interests in modelling and machine learning i
 
 * [Deep Option Hedging with Reinforcement Learning](#deep-option-hedging-with-reinforcement-learning)
 * [Portfolio Optimisation with Particles](#portfolio-optimisation-with-particles)
-* [Lead-Lag Portfolio Optimisation](#lead-lag-portfolio-optimisation)
-* [Neural Networks and Muscular Biosignals](#neural-networks-and-muscular-biosignals)
+* [Portfolio Optimisation with Lead-Lag Opportunities](#portfolio-optimisation-with-lead-lag-opportunities)
+* [Activity Detection with Neural Networks and Muscular Biosignals](#activity-detection-with-neural-networks-and-muscular-biosignals)
 * [Dimensionality Reduction Techniques](#dimensionality-reduction-techniques)
+* [Detection of Emotions with Discriminant Analysis and EEG](#detection-of-emotions-with-discriminant-analysis-and-eeg)
 
 
 ---
@@ -29,12 +30,12 @@ Specifically,
 *Numerical methods*
 
 ---
-## Lead-Lag Portfolio Optimisation
+## Portfolio Optimisation with Lead-Lag Opportunities
 
 This was a project I did with the Oxford Alpha Fund. 
 
 ---
-## Neural Networks and Muscular Biosignals
+## Activity Detection with Neural Networks and Muscular Biosignals
 
 I studied cough detection using machine learning for my undergraduate capstone project. This was done towards the broader goal of designing a medical wearable to alleviate the symptoms of Stress Urinary Incontinence.
 
@@ -49,7 +50,7 @@ This was a mini-project that I undertook with the Oxford Alpha Fund (OAF).
 The curse of dimensionality is one that plagues large-scale quantitative problems. I looked at popular dimensionality reduction techniques, including PCA and ???, and delivered a presentation to the rest of my OAF cohort.
 
 ---
-## Detection of Emotions through Affective Audio-Visual Stimuli via Electroencephalogram (EEG)
+## Detection of Emotions with Discriminant Analysis and EEG
 
 This research project was undertaken with the [Institute for Infocomm Research (I2R)](https://www.a-star.edu.sg/i2r), a department under the Agency for Science, Technology and Research (ASTAR) in Singapore, one of the country's largest IT research institutes.
 
