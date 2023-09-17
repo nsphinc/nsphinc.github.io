@@ -10,7 +10,7 @@ permalink:        pretty
 title:            "Q-Space"
 tagline:          ''
 description:      Gabriel Chu <br> 4th Year | MEng Oxford
-url:              "https://nsphinc.github.io/"
+#url:              "https://nsphinc.github.io/"
 baseurl:          "https://nsphinc.github.io/"
 cvurl:            "https://nsphinc.github.io/cv_GabrielChu.pdf"
 #baseurl:          /
