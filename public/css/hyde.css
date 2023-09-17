@@ -20,12 +20,12 @@ html {
 }
 @media (min-width: 48em) {
   html {
-    font-size: 12px;
+    font-size: 15px;
   }
 }
 @media (min-width: 58em) {
   html {
-    font-size: 20px;
+    font-size: 17px;
   }
 }
 
@@ -111,9 +111,9 @@ a.sidebar-nav-item:focus {
   padding-bottom: 4rem;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 52em) {
   .content {
-    max-width: 38rem;
+    max-width: 57rem;
     margin-left: 20rem;
     margin-right: 2rem;
   }
